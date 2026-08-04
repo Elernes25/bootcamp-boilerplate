@@ -31,7 +31,7 @@ const historialClinicaSchema = new mongoose.Schema({
 }); 
 
 // Transformación del objeto a JSON
-historiaClinicaSchema.set('toJSON', {
+historialClinicaSchema.set('toJSON', {
     transform: (doc, ret) => {
         ret.id = ret._id;
         delete ret._id;
@@ -39,4 +39,4 @@ historiaClinicaSchema.set('toJSON', {
     }
 });
 
-module.exports = mongoose.model('HistoriaClinica', historiaClinicaSchema);
+module.exports = mongoose.model('HistoriaClinica', historialClinicaSchema);
